@@ -8,7 +8,8 @@ Have you ever been craving your favorite soda on a rough day but just do not fee
 
 ### Design
 
-![Mock]()![Login](https://github.com/Hoosieman/DropByDrip/assets/141951470/f6276cf3-84ac-4bc7-868e-a243a80aa3d9)
+![Login](https://github.com/Hoosieman/DropByDrip/assets/141951470/84b88a62-4790-4ba1-91b0-72ab5ec7861d)
+
 
 
 Here is a sequence diagram that shows in what order the user will select their drink options
