@@ -14,7 +14,7 @@ Have you ever been craving your favorite soda on a rough day but just do not fee
 
 Here is a sequence diagram that shows in what order the user will select their drink options
 
-![What options for drink](votingSequenceDiagram.png)
+![Design flow](https://github.com/Hoosieman/DropByDrip/assets/141951470/121a10fd-4a6c-4ad6-ba35-76a9a1ae79cd)
 
 ### Key features
 
