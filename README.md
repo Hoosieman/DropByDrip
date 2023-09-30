@@ -54,7 +54,7 @@ For this deliverable I built out the structure of my application using HTML.
 - **Images** - Use of the company logo for branding
 - **Login** - Input box and submit button for login.
 - **Database** - The drink options represent data pulled from the database.
-- **WebSocket** - Able to see realtime updates of users favorite drink order.
+- **WebSocket** - Able to see realtime updates of users drink order.
 
 ## CSS deliverable
 
