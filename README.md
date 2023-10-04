@@ -48,13 +48,13 @@ I am going to use the required technologies in the following ways.
 
 For this deliverable I built out the structure of my application using HTML.
 
-- **HTML pages** - Two HTML page that represent the ability to login and vote.
+- **HTML pages** - Four HTML page that represent the ability to login and vote.
 - **Links** - The login page automatically links to the drinks selection page. This page showing all soda addition options.
-- **Text** - Each of the soda options item is represented by a description.
-- **Images** - Use of the company logo for branding
+- **Text** - Each of the soda options item is represented by a text button, about page describing company.
+- **Images** - Use of the company logo for branding and each html header.
 - **Login** - Input box and submit button for login.
-- **Database** - The drink options represent data pulled from the database.
-- **WebSocket** - Able to see realtime updates of users favorite drink order.
+- **Database** - The drink/Addon options represent data pulled from the database. Also the Today Favorite drink will be pulled from database
+- **WebSocket** - Able to see realtime updates of users order under "others orders" on the about page
 
 ## CSS deliverable
 
