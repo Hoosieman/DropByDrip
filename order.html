@@ -25,6 +25,7 @@
 
       <!-- Since we don't have the ability to style we use old style HTML to give some visual formatting -->
       <hr />
+      <link rel="stylesheet" type="text/css" href="CSS/drink_buttons.css">
     </header>
 
      <main>
@@ -39,9 +40,9 @@
       <!-- More formatting with old style HTML -->
       <br />
 
-      <div>
-        <label for="count">Drink</label>
-        <input type="text" id="drinkType" value="--" readonly />
+      <div class="drink">
+        <label for="drinkType">Soda:</label>
+        <input type="text" id="drinkType" value="--" readonly class="selected-drink"/>
       </div>
 
       <br />
@@ -49,36 +50,36 @@
 
       <br />
     
-      <div>
+      <div class="button-row">
           <table>
             <tr>
               <td>
-                <button id="drinkButton1">
+                <button id="drinkButton1" class="circle-button">
                   <img src="https://seeklogo.com/images/M/Mountain_Dew-logo-59462AD228-seeklogo.com.png" width="100" height="100" alt="Mountain Dew">
                 </button>
               </td>
 
               <td>
-                <button id="drinkButton2">
+                <button id="drinkButton2" class="circle-button">
                   <img src="https://seeklogo.com/images/G/Gatorade-logo-B999C43B70-seeklogo.com.png" width="100" height="100" alt="Gatorade">
                 </button>
               </td>
 
               <td>
-                  <button id="drinkButton3">
-                    <img src="https://seeklogo.com/images/P/pepsi-vertical-logo-72846897FF-seeklogo.com.png" width="100" height="100" alt="Pepsi">
+                  <button id="drinkButton3" class="circle-button">
+                    <img src="https://seeklogo.com/images/P/pepsi-vertical-logo-72846897FF-seeklogo.com.png" width="80" height="100" alt="Pepsi">
                   </button>
               </td>
 
               <td>
-                  <button id="drinkButton4">
+                  <button id="drinkButton4" class="circle-button">
                     <img src="https://seeklogo.com/images/A/a-w-root-beer-logo-85507C1409-seeklogo.com.png" width="100" height="100" alt="Root Beer">
                   </button>
               </td>
 
               <td>
-                  <button id="drinkButton5">
-                    <img src="https://seeklogo.com/images/D/diet-pepsi-logo-0CB8403228-seeklogo.com.png" width="100" height="100" alt="Diet Pepsi">
+                  <button id="drinkButton5" class="circle-button">
+                    <img src="https://seeklogo.com/images/D/diet-pepsi-logo-0CB8403228-seeklogo.com.png" width="80" height="100" alt="Diet Pepsi">
                   </button>
               </td>
 
@@ -89,30 +90,30 @@
 
             <tr>
               <td>
-                <button id="drinkButton6">
+                <button id="drinkButton6" class="circle-button">
                   <img src="https://seeklogo.com/images/D/Dr_pepper-logo-20690DAAC9-seeklogo.com.png" width="100" height="100" alt="Dr Pepper">
                 </button>
               </td>
 
               <td>
-                <button id="drinkButton7">
+                <button id="drinkButton7" class="circle-button">
                   <img src="https://seeklogo.com/images/F/fanta-logo-9BFEC1C2BB-seeklogo.com.png" width="100" height="100" alt="Fanta">
                 </button>
               </td>
               <td>
-                <button id="drinkButton8">
-                  <img src="https://seeklogo.com/images/1/7up-logo-B4D7DEF8F1-seeklogo.com.png?v=638101566320000000" width="100" height="100" alt="7up">
+                <button id="drinkButton8" class="circle-button">
+                  <img src="https://seeklogo.com/images/1/7up-logo-B4D7DEF8F1-seeklogo.com.png?v=638101566320000000" width="85" height="85" alt="7up">
                 </button>
             </td>
 
             <td>
-                <button id="drinkButton9">
+                <button id="drinkButton9" class="circle-button">
                   <img src="https://seeklogo.com/images/S/sprite-cero-logo-49F54A159C-seeklogo.com.png?v=638133635770000000" width="100" height="100" alt="Sprite">
                 </button>
             </td>
 
               <td>
-                <button id="drinkButton10">
+                <button id="drinkButton10" class="circle-button">
                   <img src="https://seeklogo.com/images/S/sierra-mist-logo-37EF2B6472-seeklogo.com.png" width="100" height="100" alt="Sierra Mist">
                 </button>
             </td>
@@ -120,30 +121,30 @@
             </tr>
             <tr>
               <td>
-                <button id="drinkButton11">
+                <button id="drinkButton11" class="circle-button">
                   <img src = 'Images/DietCoke.png' width = '100' height = '100' alt = 'Diet Coke'>
                 </button>
               </td>
 
               <td>
-                <button id="drinkButton12">
-                  <img src="https://seeklogo.com/images/C/coca-cola-circle-logo-A9EBD3B00A-seeklogo.com.png" width = '100' height = '100' alt ='Coke'>
+                <button id="drinkButton12" class="circle-button">
+                  <img src="https://seeklogo.com/images/C/coca-cola-circle-logo-A9EBD3B00A-seeklogo.com.png" width = '93' height = '93' alt ='Coke'>
                 </button>
               </td>
               <td>
-                  <button id ="drinkButton13">
+                  <button id ="drinkButton13" class="circle-button">
                     <img src="https://seeklogo.com/images/S/Sunkist-logo-45DC566A2B-seeklogo.com.png" width="100" height="100" alt="Sunkist">
                   </button>
              </td>
 
               <td>
-                  <button id="drinkButton14">
-                    <img src="https://banner2.cleanpng.com/20180411/hsw/kisspng-coca-cola-zero-sugar-fizzy-drinks-diet-coke-coca-cola-5ace244a73d946.7732682915234591464745.jpg" width="100" height="100" alt="Coke Zero">
+                  <button id="drinkButton14" class="circle-button">
+                    <img src="Images/CokeZero.png" width="107" height="110" alt="Coke Zero">
                   </button>
              </td>
 
               <td>
-                  <button id ="drinkButton15">
+                  <button id ="drinkButton15" class="circle-button">
                     <img src="https://seeklogo.com/images/S/Squirt-logo-06C0DCFA6B-seeklogo.com.png" width="100" height="100" alt="Squirt">
                   </button>
                 </td>
