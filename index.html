@@ -11,39 +11,18 @@
   <body>
     <!-- Use header, main, and footer elements to give semantic structure -->
     <header>
-      <h1>
-        <img src= "Images/DropByDripPic.png" width = '300' alt="Image"/><sup>&reg;</sup></h1>
-
-      <!-- Navigation elements -->
-      <nav>
-        <!-- Menu is a semantic alternative to <ul> that represents an interaction -->
-        <menu>
-          <li><a href="index.html">Login</a></li>
-          <li><a href="order.html">Order</a></li>
-          <li><a href="locations.html">Locations</a></li>
-          <li><a href="about.html">About</a></li>
-        </menu>
-      </nav>
-
-      <!-- Since we don't have the ability to style we use old style HTML to give some visual formatting -->
-      <hr />
+      <link rel="stylesheet" type="text/css" href="CSS/index.css">
+   
     </header>
 
     <main>
-      <h1></h1>
-      <p>LOGIN TO ORDER</p>
-      <form method="get" action="order.html">
-        <label for="email">email</label>
-        <input type="text" id="email" placeholder="example@gmail.com" />
-        <button type="submit">Login</button>
-      </form>
+      <div class="main-logo">
+        <img src= "Images/DropByDripPic.png" width = '500' alt="Image" id="logo"/>
+        <div class="hover-text" id="hover-text">CLICK LOGO</div>
+      
+      </div>
+
+      <script src="Javascript/index.js"></script>
+      
     </main>
 
-    <footer>
-      <hr />
-      <span class="text-reset">Cole Smith</span>
-      <br />
-      <a href="https://github.com/Hoosieman/DropByDrip">Repository</a>
-    </footer>
-  </body>
-</html>
