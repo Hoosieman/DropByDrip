@@ -39,11 +39,12 @@ img {
     display: block;
     width: 30%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
     border-radius: 40px;
-    background-color: #fff;
+    background-color: #ffffff;
     cursor: pointer;
     font-size: 13px;
+    color: #4aaeff;
 }
 
 #login-button:hover {
