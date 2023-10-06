@@ -1,0 +1,52 @@
+img {
+    width: 30%;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10%;
+}
+    
+
+
+
+
+
+.login-box {
+    text-align: center;
+    font-size: small;
+    width: 350px;
+    height: 120px;
+    margin: 0 auto;
+    margin-top: -1%;
+    padding: 10px;
+    border: 1px solid #ffecec;
+    background-color: #4aaeff;
+    border-radius: 100px;
+    box-shadow: 0 0 5px #ccc;
+}
+
+#email {
+    width: 70%;
+    padding: 20px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    box-sizing: 
+
+}
+
+#login-button {
+    margin: auto;
+    display: block;
+    width: 30%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+#login-button:hover {
+    background-color: #93ff9c;
+    color: #5e5d5d;
+}
