@@ -1,0 +1,78 @@
+/* Reset some default styles */
+header, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+
+.sidebar {
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    position: absolute;
+    left: -200px;
+    transition: left 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.hamburger {
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 150px;
+    left: 200px;
+    z-index: 2;
+
+}
+
+.line {
+    width: 20px;
+    height: 3px;
+    margin-left: -20px;
+    
+    background-color: #00aeff;
+    margin: 3px 0;
+
+    transition: 0.4s;
+    
+}
+
+.menu {
+    list-style: none;
+    padding: 20px;
+}
+
+.menu li {
+    margin-bottom: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Sidebar open state */
+.sidebar.active {
+    left: 0;
+}
+
+/* Rotate bars for close icon */
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
