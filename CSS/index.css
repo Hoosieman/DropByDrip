@@ -29,14 +29,14 @@
     transition: transform 2s ease; /* Add a smooth transition for the transform property */
 }
 
-#logo:hover {
+#logo:hover, #logo:active {
     content: "click to login";
     transform: scale(1.5);
     
      /* Add a scale transformation on hover */
 }
 
-#logo.zoomed {
+#logo.zoomed, #logo:active {
     transition: transform 1.5s ease;
     transform: scale(100); 
     
