@@ -4,37 +4,43 @@
     <meta charset="UTF-8" />
     <!-- Tell browsers not to scale the viewport automatically -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simon HTML</title>
+    <title></title>
     <link rel="icon" href="favicon.ico" />
-    <link rel="stylesheet" href="CSS/hamburger.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/hamburger.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/header.css">
   </head>
+  <body>
+    <!-- Use header, main, and footer elements to give semantic structure -->
+    <header>
+      
+      <h1 class="D-image"> <img src= "Images/Drop.png" width = '100' alt="Image"></h1>
 
-    <body>
-        <!-- Use header, main, and footer elements to give semantic structure -->
-        <header>
-            <h1>
-                <img src= "Images/DropByDripPic.png" width = '300' alt="Image"/><sup>&reg;</sup></h1>
-
-                <div class="sidebar">
-                    <div class="hamburger" id="hamburger">
-                      <div class="line"></div>
-                      <div class="line"></div>
-                      <div class="line"></div>
-                    </div>
-                  
-                    
-                  <!-- Menu is a semantic alternative to <ul> that represents an interaction -->
-                  <ul class="menu">
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="order.html">Order</a></li>
-                    <li><a href="locations.html">Locations</a></li>
-                    <li><a href="about.html">About</a></li>
-                  </ul>
-                </div>
+      <!-- Navigation elements -->
+      
+      <div class="sidebar">
+          <div class="hamburger" id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        
           
-                <script src="Javascript/hamburger.js"></script>
-            
-        </header>
+        <!-- Menu is a semantic alternative to <ul> that represents an interaction -->
+        <ul class="menu">
+          <li><a href="login.html">Login</a></li>
+          <li><a href="order.html">Order</a></li>
+          <li><a href="locations.html">Locations</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+
+      <script src="Javascript/hamburger.js"></script>
+
+      <!-- Since we don't have the ability to style we use old style HTML to give some visual formatting -->
+      <hr />
+      <link rel="stylesheet" type="text/css" href="CSS/drink_buttons.css">
+      <link rel="stylesheet" type="text/css" href="CSS/format.css">
+    </header>
 
         <main>
             <h1>UTAH LOCATIONS</h1>

@@ -1,0 +1,15 @@
+.D-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    color: aqua;
+}
+
+.D-image img {
+    position: absolute;
+    top: 10%;
+    cursor: pointer;
+    transition: transform 2s ease;
+    ;/* Add a smooth transition for the transform property */
+}

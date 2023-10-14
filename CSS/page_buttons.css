@@ -1,12 +1,8 @@
-
-
-
-/* Style for the circular buttons */
-.circle-button {
+.page-button {
     width: 130px; /* Set the width and height to create a circle */
-    height: 130px;
+    height: 30px;
     border-width: 0px;
-    border-radius: 50%; /* Use border-radius to round the corners and create a circle */
+    border-radius: 20%; /* Use border-radius to round the corners and create a circle */
     background-color: #efefef; /* Set the background color */
     color: #c80c0c; /* Set the text color */
     margin: 40px;
@@ -14,17 +10,17 @@
 }
 
 @media screen and (orientation: portrait) {
-    .circle-button {
+    .page-button {
         width: 100px; /* Set the width and height to create a circle */
-        height: 100px;
+        height: 20px;
         border-width: 0px;
-        border-radius: 50%; /* Use border-radius to round the corners and create a circle */
+        border-radius: 20%; /* Use border-radius to round the corners and create a circle */
         background-color: #efefef; /* Set the background color */
         color: #c80c0c; /* Set the text color */
         margin: 5px;
         transition: background-color 0.3s ease; /* Add some spacing between buttons */
     }
-    .circle-button img {
+    .page-button img {
         transform: scale(0.75);
         display: flex;
         align-items: center;
@@ -39,17 +35,17 @@
 
 
 /* Optional: Add hover effect */
-.circle-button:hover {
+.page-button:hover {
     background-color: #cae8ff; /* Change the background color on hover */
 }
 
-.circle-button:active{
+.page-button:active{
     background-color: #1e00ff; /* Change the background color when clicked */
     box-shadow: 0 5px #666; /* Add a small shadow when clicked */
     transform: translateY(4px); /* Add a slight shift when clicked */
 }
 
-.circle-button.clicked {
+.page-button.clicked {
     background-color: #00aeff; /* Change the background color when clicked */
 }
 /* Style for the button row */
@@ -92,13 +88,3 @@
     background-color: #fff;
     color: #333;
   }
-
-
-
-  
-
-
-
-
-
-
