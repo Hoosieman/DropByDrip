@@ -44,9 +44,11 @@
 
     <main>
         <!-- displays a new favorite soda every day, random-->
-      <h1>About</h1>
+      <div class="button-row">
+      <h1 class="location">About</h1>
+      </div>
 
-      <p>
+      <p class="button-row">
         DropByDrip is a company based in Utah aimed to bring quality drinks to your door. We are a small company with a passion for customer service and speed of service. Want your favorite drink delivered and made right in front of you? You are in the right place.
       
     </p>
@@ -57,37 +59,41 @@
       </p>
 
 
-      <div>
-        <h1>Today's Favorite</h1>
+      <div class="button-row">
+        <h1 class="location">Today's Favorite</h1>
+      </div>
+        <div class="button-row">
             <table>
               <tr>
                 <td>
-                  <button id="favDrinkButton">
+                  <button id="favDrinkButton" class="circle-button">
                     <img src="https://seeklogo.com/images/M/Mountain_Dew-logo-59462AD228-seeklogo.com.png" width="100" height="100" alt="Mountain Dew">
                   </button>
                 </td>
               </tr>
             </table>
+        </div>
 
         
         </div>
         <script src="Javascript/favorite.js"></script>
 
 
-
-      <h1>Other Orders</h1>
+      <div class="button-row">
+        <h1 class="location">Other Orders</h1></div>
+      
 
       <div id="other orders">
-        <div>Cole ordered:</div>
-            <div>
-                <button>Coke with Strawberry</button>
+        <div class="button-row"></div>
+            <div class="button-row">
+                <button class="circle-button">Coke with Strawberry</button>
             </div>
 
             <br>
 
-        <div>Tessa ordered:</div>
-            <div>
-                <button>Root Beer with Vanilla</button>
+        <div></div>
+            <div class="button-row">
+                <button class="circle-button">Root Beer with Vanilla</button>
             </div>
       </div>
     </main>

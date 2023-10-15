@@ -4,7 +4,7 @@
 /* Style for the circular buttons */
 .circle-button {
     width: 130px; /* Set the width and height to create a circle */
-    height: 130px;
+    height: 130px
     border-width: 0px;
     border-radius: 50%; /* Use border-radius to round the corners and create a circle */
     background-color: #efefef; /* Set the background color */
@@ -93,6 +93,37 @@
     color: #333;
   }
 
+
+  .location {
+        
+        /* CSS code to style a text input box
+        /* Set the width and height of the input box */
+        width: 200px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    
+        /* Add padding and margin for spacing and aesthetics */
+        padding: 10px;
+        margin: px;
+    
+        /* Define the border styles */
+        border: 5px solid #81cdfc;
+        border-radius: 80px;
+    
+        /* Define the font styles */
+        font-family: Arial, sans-serif;
+        font-size: 20px;
+    
+        /* Add some box shadow for a subtle effect */
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    
+        /* Customize the background and text color */
+        background-color: #fff;
+        color: #333;
+
+  }
 
 
   
