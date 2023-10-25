@@ -2,11 +2,12 @@
     width: 130px; /* Set the width and height to create a circle */
     height: 30px;
     border-width: 0px;
-    border-radius: 20%; /* Use border-radius to round the corners and create a circle */
-    background-color: #efefef; /* Set the background color */
-    color: #c80c0c; /* Set the text color */
+    border-radius: 50%; /* Use border-radius to round the corners and create a circle */
+    background-color: #027a04; /* Set the background color */
+    color: #ffffff; /* Set the text color */
     margin: 40px;
-    transition: background-color 0.3s ease; /* Add some spacing between buttons */
+    transition: background-color 0.3s ease;
+    /* Add some spacing between buttons */
 }
 
 @media screen and (orientation: portrait) {
@@ -36,7 +37,7 @@
 
 /* Optional: Add hover effect */
 .page-button:hover {
-    background-color: #cae8ff; /* Change the background color on hover */
+    background-color: #57d278; /* Change the background color on hover */
 }
 
 .page-button:active{
@@ -88,3 +89,13 @@
     background-color: #fff;
     color: #333;
   }
+
+.drink {
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    
+
+
+}
