@@ -186,41 +186,49 @@
   <p>Click count for Drink 2: <span id="clickCount2">0</span></p>
 
   <script>
-    // Function to fetch click counts and display them
-    async function fetchAndDisplayClickCounts() {
-      try {
-        // Fetch click counts from the server
-        const response = await fetch('/clicks');
-        const clickCounts = await response.json();
-
-        // Update the UI with the click counts
-        document.getElementById('clickCount1').textContent = clickCounts.drinkButton1.clickCount;
-        document.getElementById('clickCount2').textContent = clickCounts.drinkButton2.clickCount;
-      } catch (error) {
-        console.error('Error fetching click counts:', error.message);
-      }
-    }
-
-    // Function to handle button clicks
-    async function handleButtonClick(buttonId) {
+async function handleButtonClick(buttonId) {
   try {
-    const clickResponse = await fetch(`/click/${buttonId}`, { method: 'POST' });
+    const response = await fetch(`http://localhost:3000/click/${buttonId}`, { method: 'POST' });
+    const data = await response.json();
 
-    if (!clickResponse.ok) {
-      throw new Error(`Error: ${clickResponse.status} ${clickResponse.statusText}`);
+    // Update the click count in the UI
+    const clickCountElement = document.getElementById(`clickCount${buttonId.slice(-1)}`);
+    if (clickCountElement) {
+      clickCountElement.textContent = data.clickCount;
     }
-
-    const clickData = await clickResponse.json();
-    document.getElementById(`clickCount${buttonId.slice(-1)}`).textContent = clickData.clickCount;
   } catch (error) {
-    console.error(`Error incrementing click count fr ${buttonId}:`, error.message);
+    console.error('Error:', error.message);
   }
 }
 
-    // Fetch and display click counts when the page loads
-    fetchAndDisplayClickCounts();
+// Event listener for button click
+document.getElementById('drinkButton1').addEventListener('click', () => handleButtonClick('drinkButton1'));
 
-    // Add event listeners for button clicks
+
+
+
+/* async function handleButtonClick(buttonId) {
+  try {
+    const response = await fetch(`http://localhost:3000/click/${buttonId}`, { method: 'POST' });
+    const responseText = await response.text(); // Log the raw response content
+    console.log('Raw server response:', responseText);
+
+    // Check if the response has a valid JSON format before attempting to parse it
+    if (responseText.trim().startsWith('{')) {
+      const data = JSON.parse(responseText);
+      console.log(data);
+    } else {
+      console.error('Invalid JSON format in the response:', responseText);
+    }
+  } catch (error) {
+    console.error('Error:', error.message);
+  }
+
+  
+}
+
+
+
     document.getElementById('drinkButton1').addEventListener('click', () => handleButtonClick('drinkButton1'));
     document.getElementById('drinkButton2').addEventListener('click', () => handleButtonClick('drinkButton2'));
   </script>

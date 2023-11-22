@@ -1,32 +1,41 @@
 const express = require('express');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-
-app.get('/', (req, res) => {
-    res.send('Welcome to my server!');
-  });
-
-// Dummy data for drink buttons
 const drinkButtons = {
-  drinkButton1: { clickCount: 0 },
-  drinkButton2: { clickCount: 0 },
-};
+    drinkButton1: { clickCount: 0 },
+    drinkButton2: { clickCount: 0 },
+  };
+  
 
-// Increment the click count for a drink button
+app.use(cors()); // Enable CORS for all routes
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// ... your existing routes ...
+
 app.post('/click/:buttonId', (req, res) => {
-  const buttonId = req.params.buttonId;
-  const button = drinkButtons[buttonId];
+    try {
+      const buttonId = req.params.buttonId;
+      const button = drinkButtons[buttonId];
+  
+      if (button) {
+        button.clickCount += 1;
+        res.json({ success: true, clickCount: button.clickCount });
+      } else {
+        res.status(404).json({ success: false, message: 'Button not found' });
+      }
+    } catch (error) {
+      console.error('Internal Server Error:', error);
+      res.status(500).json({ success: false, message: 'Internal Server Error', error: error.message });
+    }
+  });
+  
+  
 
-  if (button) {
-    button.clickCount += 1;
-    res.json({ success: true, clickCount: button.clickCount });
-  } else {
-    res.status(404).json({ success: false, message: 'Button not found' });
-  }
-});
-
-// Get click counts for all drink buttons
 app.get('/clicks', (req, res) => {
   res.json(drinkButtons);
 });
