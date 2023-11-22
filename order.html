@@ -181,6 +181,51 @@
       <script src="Javascript/pastorder.js"></script>
 
       <br />
+
+      <p>Click count for Drink 1: <span id="clickCount1">0</span></p>
+  <p>Click count for Drink 2: <span id="clickCount2">0</span></p>
+
+  <script>
+    // Function to fetch click counts and display them
+    async function fetchAndDisplayClickCounts() {
+      try {
+        // Fetch click counts from the server
+        const response = await fetch('/clicks');
+        const clickCounts = await response.json();
+
+        // Update the UI with the click counts
+        document.getElementById('clickCount1').textContent = clickCounts.drinkButton1.clickCount;
+        document.getElementById('clickCount2').textContent = clickCounts.drinkButton2.clickCount;
+      } catch (error) {
+        console.error('Error fetching click counts:', error.message);
+      }
+    }
+
+    // Function to handle button clicks
+    async function handleButtonClick(buttonId) {
+  try {
+    const clickResponse = await fetch(`/click/${buttonId}`, { method: 'POST' });
+
+    if (!clickResponse.ok) {
+      throw new Error(`Error: ${clickResponse.status} ${clickResponse.statusText}`);
+    }
+
+    const clickData = await clickResponse.json();
+    document.getElementById(`clickCount${buttonId.slice(-1)}`).textContent = clickData.clickCount;
+  } catch (error) {
+    console.error(`Error incrementing click count fr ${buttonId}:`, error.message);
+  }
+}
+
+    // Fetch and display click counts when the page loads
+    fetchAndDisplayClickCounts();
+
+    // Add event listeners for button clicks
+    document.getElementById('drinkButton1').addEventListener('click', () => handleButtonClick('drinkButton1'));
+    document.getElementById('drinkButton2').addEventListener('click', () => handleButtonClick('drinkButton2'));
+  </script>
+
+  <script src="Javascript/backend.js"></script>
     
 
       <br />

@@ -62,16 +62,49 @@
       <div class="button-row">
         <h1 class="location">Today's Favorite</h1>
       </div>
-        <div class="button-row">
-            <table>
-              <tr>
-                <td>
-                  <button id="favDrinkButton" class="circle-button">
-                    <img src="https://seeklogo.com/images/M/Mountain_Dew-logo-59462AD228-seeklogo.com.png" width="100" height="100" alt="Mountain Dew">
-                  </button>
-                </td>
-              </tr>
-            </table>
+      <h1 class="button-row">Drink Suggestions</h1>
+
+      <ul id="drinkList"></ul>
+    
+      <script>
+        // Function to fetch drink suggestions and display them
+        async function fetchAndDisplayDrinks() {
+          try {
+            // Fetch drink suggestions from the server
+            const response = await fetch('/drinks');
+            const drinks = await response.json();
+    
+            // Get the drinkList element to display drinks
+            const drinkListElement = document.getElementById('drinkList');
+    
+            // Clear previous content
+            drinkListElement.innerHTML = '';
+    
+            // Display each drink in the list
+            drinks.forEach((drink) => {
+              const listItem = document.createElement('li');
+              listItem.textContent = `${drink.name} - Clicks: ${drink.clickCount}`;
+    
+              // Add a click event listener to increment the click count
+              listItem.addEventListener('click', async () => {
+                const clickResponse = await fetch(`/click/${drink.id}`, { method: 'POST' });
+                const clickData = await clickResponse.json();
+                
+                // Update the click count in the UI
+                listItem.textContent = `${drink.name} - Clicks: ${clickData.clickCount}`;
+              });
+    
+              // Append the drink to the list
+              drinkListElement.appendChild(listItem);
+            });
+          } catch (error) {
+            console.error('Error fetching drink suggestions:', error.message);
+          }
+        }
+    
+        // Fetch and display drinks when the page loads
+        fetchAndDisplayDrinks();
+      </script>
         </div>
 
         

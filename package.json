@@ -1,0 +1,15 @@
+{
+  "name": "dropbydrip",
+  "version": "1.0.0",
+  "description": "Have you ever been craving your favorite soda on a rough day but just do not feel like getting up to go get it? Well do we have a solution for you. introducing: DropbyDrip, the mobile soda machine that will come to wherever you are. Each and every one of our speciality soda machines is hand crafted and built to mantain cool carbonation to refresh your day. Wherever you are, we will come to you and make your fresh dream soda right before your eyes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
