@@ -2,7 +2,7 @@ const express = require('express');
 const { MongoClient } = require('mongodb');
 const app = express();
 const PORT = process.env.PORT || 3000;
-const mongoURI = 'mongodb+srv://coleto:<RahmKota2008>@coleto.6duufpv.mongodb.net/?retryWrites=true&w=majority'; // Replace with your MongoDB URI
+const mongoURI = 'mongodb+srv://123:123@coleto.mt5dxlu.mongodb.net/'; // Replace with your MongoDB URI
 
 let db;
 
