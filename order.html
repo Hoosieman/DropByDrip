@@ -182,31 +182,51 @@
 
       <br />
 
-      <p>Click count for Drink 1: <span id="clickCount1">0</span></p>
-  <p>Click count for Drink 2: <span id="clickCount2">0</span></p>
 
+      <p>CLICKS ON MOUNTAIN DEW: <span id="clickCount1" class="selected-drink">0</span></p>
+  <p>CLICKS ON GATORADE: <span id="clickCount2" class="selected-drink">0</span></p>
+  <p>CLICKS ON PEPSI: <span id="clickCount3" class="selected-drink">0</span></p>
+  <p>CLICKS ON ROOT BEER: <span id="clickCount4" class="selected-drink">0</span></p>
+  <p>CLICKS ON DIET PEPSI: <span id="clickCount5" class="selected-drink">0</span></p>
+  <p>CLICKS ON DR PEPPER: <span id="clickCount6" class="selected-drink">0</span></p>
+  <p>CLICKS ON FANTA: <span id="clickCount7" class="selected-drink">0</span></p>
+  <p>CLICKS ON 7UP: <span id="clickCount8" class="selected-drink">0</span></p>
+  <p>CLICKS ON SPRITE: <span id="clickCount9" class="selected-drink">0</span></p>
+  <p>CLICKS ON SIERRA MIST: <span id="clickCount10" class="selected-drink">0</span></p>
+  <p>CLICKS ON DIET COKE: <span id="clickCount11" class="selected-drink">0</span></p>
+  <p>CLICKS ON COKE: <span id="clickCount12" class="selected-drink">0</span></p>
+  <p>CLICKS ON SUNKIST: <span id="clickCount13" class="selected-drink">0</span></p>
+  <p>CLICKS ON COKE ZERO: <span id="clickCount14" class="selected-drink">0</span></p>
+  <p>CLICKS ON SQUIRT: <span id="clickCount15" class="selected-drink">0</span></p>
+
+      </div>
   <script>
 async function handleButtonClick(buttonId) {
   try {
     const response = await fetch(`http://localhost:3000/click/${buttonId}`, { method: 'POST' });
-    const data = await response.json();
+    const responseText = await response.text(); // Log the raw response content
+    console.log('Raw server response:', responseText);
 
-    // Update the click count in the UI
-    const clickCountElement = document.getElementById(`clickCount${buttonId.slice(-1)}`);
-    if (clickCountElement) {
-      clickCountElement.textContent = data.clickCount;
+    // Check if the response has a valid JSON format before attempting to parse it
+    if (responseText.trim().startsWith('{')) {
+      const data = JSON.parse(responseText);
+      console.log(data);
+
+      // Update the click count on the HTML page
+      const clickCountElement = document.getElementById(`clickCount${buttonId.slice(-1)}`);
+      if (clickCountElement) {
+        clickCountElement.textContent = data.clickCount;
+      } else {
+        console.error(`Element not found for clickCount${buttonId.slice(-1)}`);
+      }
+    } else {
+      console.error('Invalid JSON format in the response:', responseText);
     }
   } catch (error) {
     console.error('Error:', error.message);
   }
 }
-
-// Event listener for button click
-document.getElementById('drinkButton1').addEventListener('click', () => handleButtonClick('drinkButton1'));
-
-
-
-
+  
 /* async function handleButtonClick(buttonId) {
   try {
     const response = await fetch(`http://localhost:3000/click/${buttonId}`, { method: 'POST' });
@@ -226,11 +246,24 @@ document.getElementById('drinkButton1').addEventListener('click', () => handleBu
 
   
 }
-
+*/
 
 
     document.getElementById('drinkButton1').addEventListener('click', () => handleButtonClick('drinkButton1'));
     document.getElementById('drinkButton2').addEventListener('click', () => handleButtonClick('drinkButton2'));
+    document.getElementById('drinkButton3').addEventListener('click', () => handleButtonClick('drinkButton3'));
+    document.getElementById('drinkButton4').addEventListener('click', () => handleButtonClick('drinkButton4'));
+    document.getElementById('drinkButton5').addEventListener('click', () => handleButtonClick('drinkButton5'));
+    document.getElementById('drinkButton6').addEventListener('click', () => handleButtonClick('drinkButton6'));
+    document.getElementById('drinkButton7').addEventListener('click', () => handleButtonClick('drinkButton7'));
+    document.getElementById('drinkButton8').addEventListener('click', () => handleButtonClick('drinkButton8'));
+    document.getElementById('drinkButton9').addEventListener('click', () => handleButtonClick('drinkButton9'));
+    document.getElementById('drinkButton10').addEventListener('click', () => handleButtonClick('drinkButton10'));
+    document.getElementById('drinkButton11').addEventListener('click', () => handleButtonClick('drinkButton11'));
+    document.getElementById('drinkButton12').addEventListener('click', () => handleButtonClick('drinkButton12'));
+    document.getElementById('drinkButton13').addEventListener('click', () => handleButtonClick('drinkButton13'));
+    document.getElementById('drinkButton14').addEventListener('click', () => handleButtonClick('drinkButton14'));
+    document.getElementById('drinkButton15').addEventListener('click', () => handleButtonClick('drinkButton15'));
   </script>
 
   <script src="Javascript/backend.js"></script>
