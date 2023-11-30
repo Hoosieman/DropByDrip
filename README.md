@@ -83,7 +83,7 @@ For this deliverable I implemented by JavaScript so that the application works f
   **2** I also implemented a service that takes the most clicked drink and places it under "Suggested Drink" in the about.html page, helping users see the best option. This feature is running om the same server as the drink click counter deliverable.
 
 
-##Start-Up DB Deliverable
+## Start-Up DB Deliverable
 
 **1** I was able to set up and connect my web application to mongoDB. I implemented backend javascript to connect to mongoDB and pull data from my web app.
 
