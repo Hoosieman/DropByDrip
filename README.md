@@ -75,3 +75,39 @@ For this deliverable I implemented by JavaScript so that the application works f
 - **database** - stores info about the most ordered drink by users
 - **WebSocket** - 
 - **application logic** - If a user selects a certain soda, suggested adons for that soda pop up
+
+  ## Start-Up Service Deliverable ##
+
+- **Click Counter**  - For this deliverable I set up a server that tracks the amount of clicks that each drink button is getting, to give the user an idea of popular drinks. This server is started and runs on a different port than the web app. These drink click counters are located on the drink order page directly under where you begin selecting your drink.
+
+- **Most Liked Drink** - I also implemented a service that takes the most clicked drink and places it under "Suggested Drink" in the about.html page, helping users see the best option. This feature is running om the same server as the drink click counter deliverable.
+
+- **Past Drinks** -- I added ability to see a list of your pst clicked drinks at the top of the order.html page. I also added the ability to clear this list at any time by clicking a button.
+
+- **Node/Express** - succesfully set up and implemented.
+
+- **Backend Endpoints** - endpoints storing clicked items/amount of times they have clicked. Also pointing to previous drink clicks list.
+
+
+## Start-Up DB Deliverable
+
+- **Storing Data** - I was able to set up and connect my web application to mongoDB. I implemented backend javascript to connect to mongoDB and pull data from my web app.
+
+- **User Email & # of clicks** - the data being pulled from my web application into mongoDB includes the users emails that they use to log in, and the data for how many clicks each item (drink, addon, cup, size, etc) is getting, giving me an idea of what would be best to promote.
+
+- **Users past drink list** - past clicks of drink buttoms are stores in a list and shown to the user if wanted, this data is also stored and sorted in mongoDB
+
+- **MongoDB** - successful link and stores data
+
+- **Endpoints** - correctly processing various data, sending it to mongo.
+
+
+## Start-Up Login Service
+
+- **email stored mongo** - For this deliverable I was able to successfully create a login page.
+1. login requires a valid email address
+2. Login email is linked and stored in MongoDB
+
+- **restricted if no login** -If the user does not login with a valid email, they are unable to proceed from the login page. Ordering a drink/ accessing the other html pages is only possible after valid email authentication.
+
+- **past drink orders** - past drink order list stored for each user.
