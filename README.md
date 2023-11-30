@@ -84,6 +84,10 @@ For this deliverable I implemented by JavaScript so that the application works f
 
 - **Past Drinks** -- I added ability to see a list of your pst clicked drinks at the top of the order.html page. I also added the ability to clear this list at any time by clicking a button.
 
+- **Node/Express** - succesfully set up and implemented.
+
+- **Backend Endpoints** - endpoints storing clicked items/amount of times they have clicked. Also pointing to previous drink clicks list.
+
 
 ## Start-Up DB Deliverable
 
@@ -93,10 +97,17 @@ For this deliverable I implemented by JavaScript so that the application works f
 
 - **Users past drink list** - past clicks of drink buttoms are stores in a list and shown to the user if wanted, this data is also stored and sorted in mongoDB
 
+- **MongoDB** - successful link and stores data
+
+- **Endpoints** - correctly processing various data, sending it to mongo.
+
+
 ## Start-Up Login Service
 
-- **email stored** - For this deliverable I was able to successfully create a login page.
+- **email stored mongo** - For this deliverable I was able to successfully create a login page.
 1. login requires a valid email address
 2. Login email is linked and stored in MongoDB
 
 - **restricted if no login** -If the user does not login with a valid email, they are unable to proceed from the login page. Ordering a drink/ accessing the other html pages is only possible after valid email authentication.
+
+- **past drink orders** - past drink order list stored for each user.
