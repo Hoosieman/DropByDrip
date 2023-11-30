@@ -78,21 +78,21 @@ For this deliverable I implemented by JavaScript so that the application works f
 
   ## Start-Up Service Deliverable ##
 
-**1**  For this deliverable I set up a server that tracks the amount of clicks that each drink button is getting, to give the user an idea of popular drinks. This server is started and runs on a different port than the web app. These drink click counters are located on the drink order page directly under where you begin selecting your drink.
+- **Click Counter**  - For this deliverable I set up a server that tracks the amount of clicks that each drink button is getting, to give the user an idea of popular drinks. This server is started and runs on a different port than the web app. These drink click counters are located on the drink order page directly under where you begin selecting your drink.
 
-  **2** I also implemented a service that takes the most clicked drink and places it under "Suggested Drink" in the about.html page, helping users see the best option. This feature is running om the same server as the drink click counter deliverable.
+- **Most Liked Drink** - I also implemented a service that takes the most clicked drink and places it under "Suggested Drink" in the about.html page, helping users see the best option. This feature is running om the same server as the drink click counter deliverable.
 
 
 ## Start-Up DB Deliverable
 
-**1** I was able to set up and connect my web application to mongoDB. I implemented backend javascript to connect to mongoDB and pull data from my web app.
+- **Storing Data** - I was able to set up and connect my web application to mongoDB. I implemented backend javascript to connect to mongoDB and pull data from my web app.
 
-**2** the data being pulled from my web application into mongoDB includes the users emails that they use to log in, and the data for how many clicks each item (drink, addon, cup, size, etc) is getting, giving me an idea of what would be best to promote. 
+- **User Email & # of clicks** - the data being pulled from my web application into mongoDB includes the users emails that they use to log in, and the data for how many clicks each item (drink, addon, cup, size, etc) is getting, giving me an idea of what would be best to promote. 
 
 ## Start-Up Login Service
 
-**1** For this deliverable I was able to successfully create a login page.
+- **email stored** - For this deliverable I was able to successfully create a login page.
 1. login requires a valid email address
 2. Login email is linked and stored in MongoDB
 
-**2** If the user does not login with a valid email, they are unable to proceed from the login page. Ordering a drink/ accessing the other html pages is only possible after valid email authentication.
+- **restricted if no login** -If the user does not login with a valid email, they are unable to proceed from the login page. Ordering a drink/ accessing the other html pages is only possible after valid email authentication.
