@@ -75,3 +75,9 @@ For this deliverable I implemented by JavaScript so that the application works f
 - **database** - stores info about the most ordered drink by users
 - **WebSocket** - 
 - **application logic** - If a user selects a certain soda, suggested adons for that soda pop up
+
+  ## Start-Up Service Deliverable ##
+
+**1**  For this deliverable I set up a server that tracks the amount of clicks that each drink button is getting, to give the user an idea of popular drinks. This server is started and runs on a different port than the web app. These drink click counters are located on the drink order page directly under where you begin selecting your drink.
+
+  **2** I also implemented a service that takes the most clicked drink and places it under "Suggested Drink" in the about.html page, helping users see the best option. This feature is running om the same server as the drink click counter deliverable.
