@@ -88,3 +88,11 @@ For this deliverable I implemented by JavaScript so that the application works f
 **1** I was able to set up and connect my web application to mongoDB. I implemented backend javascript to connect to mongoDB and pull data from my web app.
 
 **2** the data being pulled from my web application into mongoDB includes the users emails that they use to log in, and the data for how many clicks each item (drink, addon, cup, size, etc) is getting, giving me an idea of what would be best to promote. 
+
+## Start-Up Login Service
+
+**1** For this deliverable I was able to successfully create a login page.
+1. login requires a valid email address
+2. Login email is linked and stored in MongoDB
+
+**2** If the user does not login with a valid email, they are unable to proceed from the login page. Ordering a drink/ accessing the other html pages is only possible after valid email authentication.
