@@ -82,12 +82,16 @@ For this deliverable I implemented by JavaScript so that the application works f
 
 - **Most Liked Drink** - I also implemented a service that takes the most clicked drink and places it under "Suggested Drink" in the about.html page, helping users see the best option. This feature is running om the same server as the drink click counter deliverable.
 
+- **Past Drinks** -- I added ability to see a list of your pst clicked drinks at the top of the order.html page. I also added the ability to clear this list at any time by clicking a button.
+
 
 ## Start-Up DB Deliverable
 
 - **Storing Data** - I was able to set up and connect my web application to mongoDB. I implemented backend javascript to connect to mongoDB and pull data from my web app.
 
-- **User Email & # of clicks** - the data being pulled from my web application into mongoDB includes the users emails that they use to log in, and the data for how many clicks each item (drink, addon, cup, size, etc) is getting, giving me an idea of what would be best to promote. 
+- **User Email & # of clicks** - the data being pulled from my web application into mongoDB includes the users emails that they use to log in, and the data for how many clicks each item (drink, addon, cup, size, etc) is getting, giving me an idea of what would be best to promote.
+
+- **Users past drink list** - past clicks of drink buttoms are stores in a list and shown to the user if wanted, this data is also stored and sorted in mongoDB
 
 ## Start-Up Login Service
 
