@@ -7,10 +7,12 @@ function login() {
       alert('Please fill in all fields.');
       return;
     }
+
+    const apiUrl = '/login';
   
     
     // Send data to the server
-    fetch('https://simon.dropbydrip.com:4000/login', {
+    fetch(apiUrl, {
       method: 'POST',
       mode: 'cors',
       headers: {

@@ -7,7 +7,8 @@ const https = require('https');
 const fs = require('fs');
 
 const app = express();
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
+const HOST = '0.0.0.0';
 
 
 app.use(cors({
@@ -129,7 +130,7 @@ connectToMongo().then(() => {
 
 
 
-  app.listen(PORT, '0.0.0.0', () => {
+  app.listen(PORT, HOST, () => {
     console.log(`Server is running on https://localhost:${PORT}`);
   });
 });
