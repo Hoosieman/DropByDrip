@@ -9,7 +9,7 @@ function login() {
     }
   
     // Send data to the server
-    fetch('http://44.218.26.102:4000/login', {
+    fetch('https://44.218.26.102:443/login', {
       method: 'POST',
       mode: 'cors',
       headers: {

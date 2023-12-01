@@ -5,7 +5,7 @@ const MongoClient = require('mongodb').MongoClient;
 const jwt = require('jsonwebtoken');
 
 const app = express();
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 443;
 
 
 app.use(cors());
@@ -120,10 +120,17 @@ connectToMongo().then(() => {
  
 
 
+  //const privateKey = fs.readFileSync('private-key.pem', 'utf8');
+  //const certificate = fs.readFileSync('certificate.pem', 'utf8');
+  //const credentials = { key: privateKey, cert: certificate };
+
+  //const server = https.createServer(credentials, app);
 
 
-  app.listen(PORT, '44.218.26.102', () => {
-    console.log(`Server is running on http://44.218.26.102:${PORT}`);
+
+
+  app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server is running on https://0.0.0.0:${PORT}`);
   });
 });
 
