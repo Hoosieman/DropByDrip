@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const MongoClient = require('mongodb').MongoClient;
 const jwt = require('jsonwebtoken');
+const https = require('https');
+const fs = require('fs');
 
 const app = express();
 const PORT = process.env.PORT || 443;
@@ -10,6 +12,7 @@ const PORT = process.env.PORT || 443;
 
 app.use(cors());
 app.use(bodyParser.json());
+
 
 const drinkButtons = {
     drinkButton1: { clickCount: 0 },
@@ -47,6 +50,9 @@ async function connectToMongo() {
 }
 
 connectToMongo().then(() => {
+
+
+  
   // Define your routes after the MongoDB connection is established
   app.post('/signup', async (req, res) => {
     const { email, password } = req.body;
@@ -116,16 +122,7 @@ connectToMongo().then(() => {
   });
   
 
-  // Start the server after the MongoDB connection is established
- 
-
-
-  //const privateKey = fs.readFileSync('private-key.pem', 'utf8');
-  //const certificate = fs.readFileSync('certificate.pem', 'utf8');
-  //const credentials = { key: privateKey, cert: certificate };
-
-  //const server = https.createServer(credentials, app);
-
+  
 
 
 

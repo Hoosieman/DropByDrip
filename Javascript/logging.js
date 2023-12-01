@@ -9,7 +9,7 @@ function login() {
     }
   
     // Send data to the server
-    fetch('https://44.218.26.102:443/login', {
+    fetch('https://ec2-44-218-26-102.compute-1.amazonaws.com:443/login', {
       method: 'POST',
       mode: 'cors',
       headers: {
