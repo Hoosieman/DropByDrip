@@ -9,7 +9,7 @@ function signup() {
     }
   
     // Send data to the server
-    fetch('http://localhost:3000/signup', {
+    fetch('http://localhost:4000/signup', {
       method: 'POST',
       mode: 'cors',
       headers: {
