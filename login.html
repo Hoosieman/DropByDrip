@@ -18,10 +18,23 @@
       <h1><img src= "Images/DropByDripPic.png" width = '200' alt="Image" id="logo"/></h1></h1>
       <form method="get" action="order.html" class="login-box">
         <label for="email"></label>
-        <input type="text" id="email" placeholder="example@gmail.com" />
+        <input type="text" id="email" placeholder="example@gmail.com" required />
         
-        <button type="submit" id="login-button">Login</button>
+        <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+        
       </form>
+
+    
+
+    
+
+      <button type="submit" onclick="login()" id="login-button">Login</button>
+      <form method="get" action="signup.html">
+        <button type="submit" id="login-button">Sign Up</button>
+      </form>
+
+      <script src="Javascript/logging.js"></script>
     </main>
 
   </body>

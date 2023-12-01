@@ -1,0 +1,135 @@
+
+
+
+/* Style for the circular buttons */
+.circle-button {
+    width: 130px; /* Set the width and height to create a circle */
+    height: 130px
+    border-width: 0px;
+    border-radius: 50%; /* Use border-radius to round the corners and create a circle */
+    background-color: #efefef; /* Set the background color */
+    color: #c80c0c; /* Set the text color */
+    margin: 40px;
+    transition: background-color 0.3s ease; /* Add some spacing between buttons */
+}
+
+@media screen and (orientation: portrait) {
+    .circle-button {
+        width: 100px; /* Set the width and height to create a circle */
+        height: 100px;
+        border-width: 0px;
+        border-radius: 50%; /* Use border-radius to round the corners and create a circle */
+        background-color: #efefef; /* Set the background color */
+        color: #c80c0c; /* Set the text color */
+        margin: 5px;
+        transition: background-color 0.3s ease; /* Add some spacing between buttons */
+    }
+    .circle-button img {
+        transform: scale(0.75);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 100%;
+       max-height: 100%;
+    }
+    
+}
+
+
+
+/* Optional: Add hover effect */
+.circle-button:hover {
+    background-color: #cae8ff; /* Change the background color on hover */
+}
+
+.circle-button:active{
+    background-color: #1e00ff; /* Change the background color when clicked */
+    box-shadow: 0 5px #666; /* Add a small shadow when clicked */
+    transform: translateY(4px); /* Add a slight shift when clicked */
+}
+
+.circle-button.clicked {
+    background-color: #00aeff; /* Change the background color when clicked */
+}
+/* Style for the button row */
+.button-row {
+    display: flex;
+    justify-content: center;
+     /* Center the buttons horizontally */
+}
+
+.drink {
+    text-align: center;
+}
+
+
+.selected-drink {
+    
+    /* CSS code to style a text input box
+    /* Set the width and height of the input box */
+    width: 200px;
+    height: 1px;
+    justify-content: center;
+    text-align: center;
+  
+    /* Add padding and margin for spacing and aesthetics */
+    padding: 10px;
+    margin: px;
+  
+    /* Define the border styles */
+    border: 5px solid #81cdfc;
+    border-radius: 80px;
+  
+    /* Define the font styles */
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+  
+    /* Add some box shadow for a subtle effect */
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  
+    /* Customize the background and text color */
+    background-color: #fff;
+    color: #333;
+  }
+
+
+  .location {
+        
+        /* CSS code to style a text input box
+        /* Set the width and height of the input box */
+        width: 200px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    
+        /* Add padding and margin for spacing and aesthetics */
+        padding: 10px;
+        margin: px;
+    
+        /* Define the border styles */
+        border: 5px solid #81cdfc;
+        border-radius: 80px;
+    
+        /* Define the font styles */
+        font-family: Arial, sans-serif;
+        font-size: 20px;
+    
+        /* Add some box shadow for a subtle effect */
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    
+        /* Customize the background and text color */
+        background-color: #fff;
+        color: #333;
+
+  }
+
+
+  
+
+
+
+
+
+
