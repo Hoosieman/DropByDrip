@@ -131,7 +131,7 @@ connectToMongo().then(() => {
 
 
   app.listen(PORT, HOST, () => {
-    console.log(`Server is running on https://localhost:${PORT}`);
+    console.log(`Server is running on http://0.0.0.0:${PORT}`);
   });
 });
 

@@ -8,7 +8,7 @@ function login() {
       return;
     }
 
-    const apiUrl = '/login';
+    const apiUrl = 'https://BALANCE-1756097810.us-east-1.elb.amazonaws.com:3000/login';
   
     
     // Send data to the server
