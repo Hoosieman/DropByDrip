@@ -8,8 +8,9 @@ function login() {
       return;
     }
   
+    
     // Send data to the server
-    fetch('https://ec2-44-218-26-102.compute-1.amazonaws.com:443/login', {
+    fetch('https://simon.dropbydrip.com/login', {
       method: 'POST',
       mode: 'cors',
       headers: {

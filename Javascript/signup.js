@@ -7,9 +7,9 @@ function signup() {
       alert('Please fill in all fields.');
       return;
     }
-  
+    
     // Send data to the server
-    fetch('https://ec2-44-218-26-102.compute-1.amazonaws.com:443/signup', {
+    fetch('https://simon.dropbydrip.com/signup', {
       method: 'POST',
       mode: 'cors',
       headers: {
