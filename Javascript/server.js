@@ -7,6 +7,10 @@ const jwt = require('jsonwebtoken');
 const app = express();
 const PORT = process.env.PORT || 4000;
 
+
+app.use(cors());
+app.use(bodyParser.json());
+
 const drinkButtons = {
     drinkButton1: { clickCount: 0 },
     drinkButton2: { clickCount: 0 },
@@ -25,8 +29,7 @@ const drinkButtons = {
     drinkButton15: { clickCount: 0 },
   };
 
-app.use(cors());
-app.use(bodyParser.json());
+
 
 
 const mongoURI = 'mongodb+srv://coleto:1@coleto.mt5dxlu.mongodb.net/?retryWrites=true&w=majority';
@@ -63,15 +66,7 @@ connectToMongo().then(() => {
     }
   });
 
-  // Start the server after the MongoDB connection is established
-  app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Server is running on http://0.0.0.0:${PORT}`);
-  });
-  
-});
-
-    // Add a new route for handling login requests
-app.post('/login', async (req, res) => {
+  app.post('/login', async (req, res) => {
     const { email, password } = req.body;
   
     // Simple validation
@@ -98,8 +93,6 @@ app.post('/login', async (req, res) => {
   });
 
 
-
-
   app.post('/click/:buttonId', (req, res) => {
     try {
       const buttonId = req.params.buttonId;
@@ -116,12 +109,34 @@ app.post('/login', async (req, res) => {
       res.status(500).json({ success: false, message: 'Internal Server Error', error: error.message });
     }
   });
+
+
+  app.get('/clicks', (req, res) => {
+    res.json(drinkButtons);
+  });
+  
+
+  // Start the server after the MongoDB connection is established
+ 
+
+
+
+
+  app.listen(PORT, '44.218.26.102', () => {
+    console.log(`Server is running on http://44.218.26.102:${PORT}`);
+  });
+});
+
+    // Add a new route for handling login requests
+
+
+
+
+
+  
   
   
 
-app.get('/clicks', (req, res) => {
-  res.json(drinkButtons);
-});
 
   
 
