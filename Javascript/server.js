@@ -7,11 +7,11 @@ const https = require('https');
 const fs = require('fs');
 
 const app = express();
-const PORT = process.env.PORT || 443;
+const PORT = process.env.PORT || 4000;
 
 
 app.use(cors({
-    origin: 'https://simon.dropbydrip.com',
+    origin: '*',
   }));
 
 app.use(bodyParser.json());
@@ -130,7 +130,7 @@ connectToMongo().then(() => {
 
 
   app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Server is running on https://simon.dropbydrip.com:${PORT}`);
+    console.log(`Server is running on https://localhost:${PORT}`);
   });
 });
 

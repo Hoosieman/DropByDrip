@@ -9,7 +9,7 @@ function signup() {
     }
     
     // Send data to the server
-    fetch('https://simon.dropbydrip.com/signup', {
+    fetch('https://simon.dropbydrip.com:4000/signup', {
       method: 'POST',
       mode: 'cors',
       headers: {
