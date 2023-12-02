@@ -7,12 +7,12 @@ const https = require('https');
 const fs = require('fs');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 80;
 const HOST = '0.0.0.0';
 
 
 app.use(cors({
-  origin: ['https://BALANCE-1756097810.us-east-1.elb.amazonaws.com:3000', 'https://simon.dropbydrip.com'],
+  origin: ['https://BALANCE-1756097810.us-east-1.elb.amazonaws.com', 'https://simon.dropbydrip.com'],
   credentials: true,  // Include if you are using credentials (cookies, headers)
 }));
 
