@@ -11,7 +11,11 @@ const PORT = process.env.PORT || 3000;
 const HOST = '0.0.0.0';
 
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://simon.dropbydrip.com',
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  allowedHeaders: 'Content-Type',
+}));
 
 /*app.use(cors({
   oringin: '*'
