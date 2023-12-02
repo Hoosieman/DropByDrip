@@ -12,7 +12,7 @@ const HOST = '0.0.0.0';
 
 
 app.use(cors({
-  origin: ['https://BALANCE-1756097810.us-east-1.elb.amazonaws.com', 'https://simon.dropbydrip.com'],
+  origin: ['https://simon.dropbydrip.com'],
   credentials: true,  // Include if you are using credentials (cookies, headers)
 }));
 

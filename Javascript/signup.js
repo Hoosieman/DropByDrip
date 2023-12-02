@@ -8,7 +8,7 @@ function signup() {
       return;
     }
 
-    const apiUrl = 'https://BALANCE-1756097810.us-east-1.elb.amazonaws.com/signup';
+    const apiUrl = 'https://simon.dropbydrip.com/signup';
      //const apiUrl = 'http://localhost:3000/signup';
     // Send data to the server
     fetch(apiUrl, {
