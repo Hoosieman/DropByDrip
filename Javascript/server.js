@@ -12,9 +12,13 @@ const HOST = '0.0.0.0';
 
 
 app.use(cors({
-    origin: '*',
+    origin: 'https://BALANCE-1756097810.us-east-1.elb.amazonaws.com:3000',
   }));
 
+/*app.use(cors({
+  oringin: '*'
+}));
+*/
 app.use(bodyParser.json());
 
 
@@ -131,7 +135,7 @@ connectToMongo().then(() => {
 
 
   app.listen(PORT, HOST, () => {
-    console.log(`Server is running on http://0.0.0.0:${PORT}`);
+    console.log(`Server is running on https://0.0.0.0:${PORT}`);
   });
 });
 
