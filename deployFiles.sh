@@ -26,6 +26,7 @@ ENDSSH
 
 # Step 2
 printf "\n----> Copy only the changed files to the target.\n"
-rsync -avz --exclude='.git' --exclude='node_modules' -e "ssh -i $key" --update * ubuntu@$hostname:services/$service/public
+RSYNC_PATH=/usr/bin/rsync
+$RSYNC_PATH -avz --exclude='.git' --exclude='node_modules' -e "ssh -i $key" --update * ubuntu@$hostname:services/$service/public
 
 
