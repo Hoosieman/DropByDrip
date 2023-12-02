@@ -12,7 +12,7 @@ const HOST = '0.0.0.0';
 
 
 app.use(cors({
-  origin: 'https://simon.dropbydrip.com',
+  origin: 'https://simon.dropbydrip.com:3000',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   allowedHeaders: 'Content-Type, Accept',
 }));
