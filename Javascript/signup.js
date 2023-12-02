@@ -8,7 +8,7 @@ function signup() {
       return;
     }
 
-    const apiUrl = 'https://simon.dropbydrip.com/signup';
+    const apiUrl = 'https://simon.dropbydrip.com:3000/signup';
      //const apiUrl = 'http://localhost:3000/signup';
     // Send data to the server
     fetch(apiUrl, {

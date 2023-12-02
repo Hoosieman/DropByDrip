@@ -7,14 +7,11 @@ const https = require('https');
 const fs = require('fs');
 
 const app = express();
-const PORT = process.env.PORT || 443;
+const PORT = process.env.PORT || 3000;
 const HOST = '0.0.0.0';
 
 
-app.use(cors({
-  origin: ['https://simon.dropbydrip.com'],
-  credentials: true,  // Include if you are using credentials (cookies, headers)
-}));
+app.use(cors());
 
 /*app.use(cors({
   oringin: '*'
