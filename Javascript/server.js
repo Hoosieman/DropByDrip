@@ -12,8 +12,9 @@ const HOST = '0.0.0.0';
 
 
 app.use(cors({
-    origin: 'https://BALANCE-1756097810.us-east-1.elb.amazonaws.com:3000',
-  }));
+  origin: ['https://BALANCE-1756097810.us-east-1.elb.amazonaws.com:3000', 'https://simon.dropbydrip.com'],
+  credentials: true,  // Include if you are using credentials (cookies, headers)
+}));
 
 /*app.use(cors({
   oringin: '*'
