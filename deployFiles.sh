@@ -27,7 +27,9 @@ ENDSSH
 
 # Step 2
 printf "\n----> Copy the distribution package to the target.\n"
-rsync -r -u -e "ssh -i $key" * ubuntu@$hostname:services/$service/public
+rsync -r -u --ignore-errors -e "ssh -i $key" * ubuntu@$hostname:services/$service/public
+
+
 
 
 
