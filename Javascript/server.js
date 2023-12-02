@@ -14,7 +14,7 @@ const HOST = '0.0.0.0';
 app.use(cors({
   origin: 'https://simon.dropbydrip.com',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  allowedHeaders: 'Content-Type',
+  allowedHeaders: 'Content-Type, Accept',
 }));
 
 /*app.use(cors({
