@@ -25,5 +25,7 @@ mkdir -p services/${service}/public
 ENDSSH
 
 # Step 2
-printf "\n----> Copy the distribution package to the target.\n"
-scp -r -i "$key" * ubuntu@$hostname:services/$service/public
+printf "\n----> Copy only the changed files to the target.\n"
+rsync -avz --exclude='.git' --exclude='node_modules' -e "ssh -i $key" --update * ubuntu@$hostname:services/$service/public
+
+
