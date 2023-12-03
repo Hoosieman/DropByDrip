@@ -39,6 +39,6 @@ function signup() {
   })
   .catch(error => {
     console.error('Error:', error);
-    alert('An error occurred. Please try again laterasdasdasd.');
+    alert('An error occurred. Please try.');
   });
 }

@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 while getopts k:h:s: flag
@@ -18,13 +19,15 @@ fi
 printf "\n----> Deploying files for $service to $hostname with $key\n"
 
 # Step 1
-printf "\n----> Clear out the previous distribution on the target.\n"
-ssh -i "$key" ubuntu@$hostname << ENDSSH
-rm -rf services/${service}/public
-mkdir -p services/${service}/public
-ENDSSH
+printf "\n----> remove current files.\n"
+
+
 
 # Step 2
 printf "\n----> Copy the distribution package to the target.\n"
-scp -r -i "$key" * ubuntu@$hostname:services/$service/public
+scp -r -i "$key" Javascript/server.js Javascript/signup.js Javascript/logging.js index.html ubuntu@$hostname:services/$service/public
+
+
+
+###
 
