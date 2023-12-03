@@ -35,6 +35,6 @@ function login() {
     })
     .catch(error => {
       console.error('Error:', error);
-      alert('An error occurred. Please try again later.');
+      alert('An error occurred. Please try again laterrrrrr.');
     });
   }
