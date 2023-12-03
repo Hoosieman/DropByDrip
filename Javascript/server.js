@@ -7,8 +7,7 @@ const https = require('https');
 const fs = require('fs');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
-const HOST = 'localhost';
+const PORT = 80;
 
 
 /* app.use((req, res, next) => {
@@ -17,12 +16,14 @@ const HOST = 'localhost';
   next();
 }); */
 
+
+
 app.use(cors({
-  origin: 'https://BALANCE-1756097810.us-east-1.elb.amazonaws.com:3000'
+  origin: '*'
 }));
 
 app.use(bodyParser.json());
-app.use(express.static('public')); 
+
 
 
 const drinkButtons = {
@@ -43,6 +44,11 @@ const drinkButtons = {
     drinkButton15: { clickCount: 0 },
   };
 
+
+  app.get('/test', (req, res) => {
+    res.setHeader('Content-Type', 'application/json');
+    res.json({ message: 'This is a test response' });
+  });
 
 
 
@@ -131,17 +137,21 @@ connectToMongo().then(() => {
   });
 
 
+ 
+  
+
   app.get('/clicks', (req, res) => {
     res.json(drinkButtons);
   });
   
 
+
   
 
 
 
-  app.listen(PORT, HOST, () => {
-    console.log(`Server is running on https://localhost:${PORT}`);
+  app.listen(PORT, () => {
+    console.log(`Server is running on https://0.0.0.0:${PORT}`);
   });
 });
 
@@ -149,13 +159,9 @@ connectToMongo().then(() => {
 
 
 
-
-
   
   
   
 
-
-  
 
   
