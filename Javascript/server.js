@@ -8,20 +8,21 @@ const fs = require('fs');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const HOST = '0.0.0.0';
+const HOST = 'localhost';
 
+
+/* app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'https://simon.dropbydrip.com');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+}); */
 
 app.use(cors({
-  origin: 'https://simon.dropbydrip.com:3000',
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  allowedHeaders: 'Content-Type, Accept',
+  origin: 'https://BALANCE-1756097810.us-east-1.elb.amazonaws.com:3000'
 }));
 
-/*app.use(cors({
-  oringin: '*'
-}));
-*/
 app.use(bodyParser.json());
+app.use(express.static('public')); 
 
 
 const drinkButtons = {
@@ -67,16 +68,19 @@ connectToMongo().then(() => {
   app.post('/signup', async (req, res) => {
     const { email, password } = req.body;
 
+
     // Simple validation
     if (!email || !password) {
       return res.status(400).json({ success: false, message: 'Email and password are required fields.' });
     }
 
     try {
-      // Insert user into the database with hashed password
+    // Insert user into the database with hashed password
+      res.header('Content-Type', 'application/json');
       await db.collection('emails').insertOne({ email, password });
       res.json({ success: true, message: 'Sign up successful!' });
     } catch (error) {
+      res.header('Content-Type', 'application/json');
       console.error('Error inserting user:', error);
       res.status(500).json({ success: false, message: 'Sign up failed. Please try again.' });
     }
@@ -137,7 +141,7 @@ connectToMongo().then(() => {
 
 
   app.listen(PORT, HOST, () => {
-    console.log(`Server is running on https://0.0.0.0:${PORT}`);
+    console.log(`Server is running on https://localhost:${PORT}`);
   });
 });
 
