@@ -5,24 +5,27 @@ const MongoClient = require('mongodb').MongoClient;
 const jwt = require('jsonwebtoken');
 const https = require('https');
 const fs = require('fs');
+const e = require('express');
 
 const app = express();
-const PORT = 80;
+const PORT = 3000;
+const ELB_HOST = 'localhost';
 
 
-/* app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://simon.dropbydrip.com');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-  next();
-}); */
 
+// Create an HTTPS server
+
+
+app.use(bodyParser.json());
+
+app.use(express.static('./'));
 
 
 app.use(cors({
   origin: '*'
 }));
 
-app.use(bodyParser.json());
+
 
 
 
@@ -45,10 +48,10 @@ const drinkButtons = {
   };
 
 
-  app.get('/test', (req, res) => {
-    res.setHeader('Content-Type', 'application/json');
-    res.json({ message: 'This is a test response' });
-  });
+ 
+  
+
+  
 
 
 
@@ -70,11 +73,15 @@ connectToMongo().then(() => {
 
 
   
+  
+});
+
+  
   // Define your routes after the MongoDB connection is established
   app.post('/signup', async (req, res) => {
     const { email, password } = req.body;
-
-
+    console.log(email, password)
+    console.log('working')
     // Simple validation
     if (!email || !password) {
       return res.status(400).json({ success: false, message: 'Email and password are required fields.' });
@@ -82,12 +89,18 @@ connectToMongo().then(() => {
 
     try {
     // Insert user into the database with hashed password
+      
+      //await db.collection('emails').insertOne({ email, password });
       res.header('Content-Type', 'application/json');
-      await db.collection('emails').insertOne({ email, password });
+      
+
       res.json({ success: true, message: 'Sign up successful!' });
     } catch (error) {
       res.header('Content-Type', 'application/json');
       console.error('Error inserting user:', error);
+
+      
+
       res.status(500).json({ success: false, message: 'Sign up failed. Please try again.' });
     }
   });
@@ -143,25 +156,23 @@ connectToMongo().then(() => {
   app.get('/clicks', (req, res) => {
     res.json(drinkButtons);
   });
-  
 
 
-  
-
-
-
-  app.listen(PORT, () => {
-    console.log(`Server is running on https://0.0.0.0:${PORT}`);
+  app.use((_req, res) => {
+    res.sendFile('index.html', {root: './'});
   });
-});
-
-    // Add a new route for handling login requests
-
-
-
-  
   
   
 
 
   
+
+
+
+  app.listen(PORT, ELB_HOST, () => {
+    console.log(`Server is running on https://${ELB_HOST}:${PORT}`);
+  
+  });
+
+
+
